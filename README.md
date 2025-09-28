@@ -8,9 +8,10 @@ It provides insights into revenue trends, top products, and customer segmentatio
 ---
 
 ## Architecture
-![Architecture Diagram](architecture/architecture_diagram.png)
+![Architecture Diagram](architecture/Architecture_Diagram_drawio.png)
 
-**Workflow:**
+**Workflow & Datapipeline flow**
+![Data_Pipeline_Flow](architecture/data_pipeline_flow.drawio)
 1. Raw E-commerce data is uploaded to **AWS S3**.  
 2. **ETL process** using AWS Glue or Lambda cleans and transforms the data.  
 3. Processed data is stored back in **S3** in Parquet format.  
