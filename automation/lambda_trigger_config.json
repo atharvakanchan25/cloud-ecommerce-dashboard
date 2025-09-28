@@ -1,1 +1,11 @@
-Lambda trigger config 
+{
+  "raw_data_bucket": "s3://cloud-ecommerce-dashboard/raw",
+  "processed_data_bucket": "s3://cloud-ecommerce-dashboard/processed",
+  "etl_script_path": "etl/glue_jobs/etl_script.py",
+  "dashboard_refresh": true,
+  "file_types": ["csv", "json"],
+  "notification": {
+    "enabled": true,
+    "sns_topic_arn": "arn:aws:sns:us-east-1:123456789012:DataRefreshTopic"
+  }
+}

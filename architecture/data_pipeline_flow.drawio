@@ -1,1 +1,77 @@
-Flow Diagram Placeholder 
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="E-commerce Data Pipeline" id="data-pipeline">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Data Sources -->
+        <mxCell id="2" value="Orders CSV" style="shape=rectangle;fillColor=#f9f;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Products CSV" style="shape=rectangle;fillColor=#f9f;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Customers CSV" style="shape=rectangle;fillColor=#f9f;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Payments CSV" style="shape=rectangle;fillColor=#f9f;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Raw S3 -->
+        <mxCell id="6" value="S3 Bucket - Raw Data" style="shape=cylinder;fillColor=#bfb;" vertex="1" parent="1">
+          <mxGeometry x="240" y="140" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- ETL -->
+        <mxCell id="7" value="AWS Glue / Lambda ETL" style="shape=rectangle;fillColor=#bbf;" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Processed S3 -->
+        <mxCell id="8" value="S3 Bucket - Processed Data" style="shape=cylinder;fillColor=#bfb;" vertex="1" parent="1">
+          <mxGeometry x="720" y="140" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Query Layer -->
+        <mxCell id="9" value="AWS Athena / Redshift" style="shape=rectangle;fillColor=#ffb;" vertex="1" parent="1">
+          <mxGeometry x="960" y="140" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Tableau Dashboard -->
+        <mxCell id="10" value="Tableau Dashboard" style="shape=rectangle;fillColor=#fbf;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="140" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="2" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="3" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="4" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="5" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="6" target="7" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="7" target="8" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="8" target="9" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=classic;" edge="1" source="9" target="10" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

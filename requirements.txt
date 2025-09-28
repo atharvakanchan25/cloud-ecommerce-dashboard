@@ -1,1 +1,21 @@
-pandas 
+# AWS SDK
+boto3==1.28.65
+
+# AWS Data Wrangler for ETL with S3, Athena, and Glue
+awswrangler==3.2.0
+
+# Data manipulation
+pandas==2.1.0
+numpy==1.26.0
+
+# Faker for generating sample data
+Faker==23.15.1
+
+# Optional: For Lambda JSON handling
+jsonschema==4.21.1
+
+# Optional: For date/time manipulation
+python-dateutil==2.9.2
+
+# Optional: If you plan on using PySpark in Glue
+pyspark==3.5.1
